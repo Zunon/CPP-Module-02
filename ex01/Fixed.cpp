@@ -16,13 +16,13 @@ Fixed::Fixed(const Fixed &number) {
 
 Fixed::Fixed(const int num) {
 	std::cout << "Int constructor called" << std::endl;
-	value = num << FRACTIONAL_BITS | 0x00;
+	value = (num << FRACTIONAL_BITS) | 0x00;
 }
 
 Fixed::Fixed(const float num) {
 	std::cout << "Float constructor called" << std::endl;
 	value = std::floor(num) * std::pow(2.0, 8);
-	value = static_cast<int>(std::round((num - std::floor(num))
+	value += static_cast<int>(std::round((num - std::floor(num))
 			* (1.0 / std::pow(2.0, -8))));
 
 }
