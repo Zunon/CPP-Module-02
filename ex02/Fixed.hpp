@@ -20,10 +20,10 @@ public:
 	Fixed (const Fixed &);
 	Fixed (const int);
 	Fixed (const float);
-	Fixed			operator++ (void);
-	Fixed			operator-- (void);
-	Fixed			&operator++ (int);
-	Fixed			&operator-- (int);
+	Fixed			&operator++ (void);
+	Fixed			&operator-- (void);
+	Fixed			operator++ (int);
+	Fixed			operator-- (int);
 	Fixed			&operator= (const Fixed &);
 	bool			operator< (const Fixed &) const;
 	bool			operator<= (const Fixed &) const;
